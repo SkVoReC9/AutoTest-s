@@ -39,3 +39,11 @@ wait_Tour_create = WebDriverWait(driver, 10).until(
 
 Game_Pick = driver.find_element_by_id("game-Call of Duty")
 Game_Pick.click()
+
+#Locale_Ru_Pick = driver.find_element_by_id("tournament-description-locale-ru_RU")
+
+Input_Title = driver.find_element_by_id("tournament-title")
+Input_Title.send_keys('At:Русский(Саша)')
+
+Input_Descr = driver.find_element_by_id("tournament-description-title")
+Input_Descr.send_keys('At:русский(Саша)')

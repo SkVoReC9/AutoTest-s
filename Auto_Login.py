@@ -53,7 +53,7 @@ Input_Descr.send_keys('At:русский(Саша)')
 Input_Unreg_Info = driver.find_element_by_id("tournament-unauthorized-description")
 Input_Unreg_Info.send_keys('AT')
 
-Input_Reg_Info = driver.find_element_by_id('tournament-unauthorized-description')
+Input_Reg_Info = driver.find_element_by_id('tournament-authorized-description')
 Input_Reg_Info.send_keys('AT')
 
 Input_Final_Info = driver.find_element_by_id('tournament-final-description')
@@ -61,6 +61,8 @@ Input_Final_Info.send_keys('AT')
 
 #Заполнение английской локали
 Locale_En_Pick = driver.find_element_by_id("tournament-description-locale-en_US")
+Locale_En_Pick.click()
+
 Input_Title = driver.find_element_by_id("tournament-title")
 Input_Title.send_keys('At:eng(Саша)')
 
@@ -71,7 +73,7 @@ Locale_En_Pick.click()
 Input_Unreg_Info = driver.find_element_by_id("tournament-unauthorized-description")
 Input_Unreg_Info.send_keys('AT')
 
-Input_Reg_Info = driver.find_element_by_id('tournament-unauthorized-description')
+Input_Reg_Info = driver.find_element_by_id('tournament-authorized-description')
 Input_Reg_Info.send_keys('AT')
 
 Input_Final_Info = driver.find_element_by_id('tournament-final-description')
@@ -86,7 +88,6 @@ Trnt_map.send_keys('Map')
 
 #Выбор типа турнира
 
-select = Select(driver.find_element_by_id('tournament-ticket-type'))
-select.select_by_visible_text('Платный')
+#TODO выбор типа турнира(платный или бесплатный) из выпдаюзего списка(input). Необходимо доработать метод нажатия
 
 

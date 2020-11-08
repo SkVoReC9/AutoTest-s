@@ -48,4 +48,3 @@ Input_Title.send_keys('At:Русский(Саша)')
 Input_Descr = driver.find_element_by_id("tournament-description-title")
 Input_Descr.send_keys('At:русский(Саша)')
 
-#545545433

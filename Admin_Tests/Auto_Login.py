@@ -1,9 +1,8 @@
 from selenium import webdriver
-import threading
-from selenium.webdriver.support.ui import WebDriverWait, Select
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+import datetime
 
 driver = webdriver.Chrome()
 #Логин в админку
@@ -88,6 +87,12 @@ Trnt_map.send_keys('Map')
 
 #Выбор типа турнира
 
-#TODO выбор типа турнира(платный или бесплатный) из выпдаюзего списка(input). Необходимо доработать метод нажатия
+#TODO выбор типа турнира(платный или бесплатный) из выпдаюзего списка(input). Необходимо доработать метод нажатия. Пока бесплатные
+now = datetime.datetime.now()
+
+DatePicker = driver.find_element_by_class_name('asd__month')
+Date = DatePicker.find_elements_by_tag_name('td')
+
+
 
 

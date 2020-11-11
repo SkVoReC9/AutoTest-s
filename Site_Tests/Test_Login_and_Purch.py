@@ -35,7 +35,7 @@ class TestLogin(unittest.TestCase):
         print('Discord Login Ok!')
         print('Start Arenum Quests')
         #Переходим в профиль для выполнения задания
-        Login_Succes = WebDriverWait(driver, 100).until(EC.presence_of_element_located(
+        Login_Succes = WebDriverWait(driver, 100).until(EC.element_to_be_clickable(
             (By.CLASS_NAME, 'header-profile')))
         LogOut_Dis = driver.find_element_by_class_name('header-profile').click()
 
@@ -63,11 +63,14 @@ class TestLogin(unittest.TestCase):
         Go_To_Quest = driver.find_element_by_xpath('//*[@id="profile-rewards"]/div[1]/a[2]').click()
         Quest_Telephone = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.XPATH, '//input[@name="telephone"]')))
-        Quest_Telephone = driver.find_element_by_xpath('//input[@name="telephone"]').send_keys('+7999999'+str(random.randint(1000, 9999)))
+        a = '+790000'+str(random.randint(10000, 99999))
+        print(a)
+        Quest_Telephone = driver.find_element_by_xpath('//input[@name="telephone"]').send_keys(a)
         Quest_Telephone = driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div/div/div[3]/div/button[1]').click()
-        Quest_Telephone = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(
+        Quest_Telephone = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/div[6]/div[2]/div/div[1]')))
         Quest_Telephone = driver.find_element_by_xpath('//*[@id="__layout"]/div/div[6]/div[2]/div/div[1]').click()
+
         print('Arenum Quests OK!')
 
         # Выходим из аккаунта после выполнения заданий

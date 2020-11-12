@@ -107,7 +107,31 @@ class TestLogin(unittest.TestCase):
         Login_Social = driver.find_element_by_xpath('//*[@id="passwordNext"]/div/button/div[2]').click()
         Login_Social = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.CLASS_NAME, 'header-profile')))
-        self.assertTrue(Login_Social, "Test Failed")
+        Go_To_Quest = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+            (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
+        Go_To_Quest = driver.find_element_by_xpath(
+            '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()
+        try:
+            Go_To_Quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
+            Go_To_Quest = driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
+        except TimeoutException:
+            LogOut_Dis = driver.find_element_by_class_name('header-profile').click()
+            Go_To_Quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
+            Go_To_Quest = driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()
+            Go_To_Quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
+            Go_To_Quest = driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
+        Go_To_Quest = driver.find_element_by_xpath(
+            '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
+        Go_To_Quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+            (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
+
+        self.assertTrue(Go_To_Quest, "Test Failed")
         print('Google login end')
         print('Google test OK!')
     def tearDown(self):

@@ -40,7 +40,7 @@ class TestLogin(unittest.TestCase):
         LogOut_Dis = driver.find_element_by_class_name('header-profile').click()
 
         #Выполение заданий
-        Go_To_Quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+        Go_To_Quest = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
         Go_To_Quest = driver.find_element_by_xpath('//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()
         try:

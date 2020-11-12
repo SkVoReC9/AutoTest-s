@@ -13,6 +13,7 @@ import random
 class TestLogin(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
+    @unittest.skip('Discord test skipped for Google Test')
     def test_log_in_discord(self):
         #Вход на сайт и логин в дискорд
         print('Start Discord Test')
@@ -56,10 +57,11 @@ class TestLogin(unittest.TestCase):
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
             Go_To_Quest = driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
-
+        #Переходим во вкладку задания
         Go_To_Quest = driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
         Go_To_Quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
+        #Переходим на задания по заполнению мобильного телефона
         Go_To_Quest = driver.find_element_by_xpath('//*[@id="profile-rewards"]/div[1]/a[2]').click()
         Quest_Telephone = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.XPATH, '//input[@name="telephone"]')))
@@ -96,6 +98,7 @@ class TestLogin(unittest.TestCase):
         driver = self.driver
         driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
         driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
+        #Вход на сайт через Google аккаунт
         Login_wait = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/div[4]/div[2]/div/div[2]/div[2]/button[3]')))
         driver.execute_script("arguments[0].click();", Login_wait)
@@ -105,8 +108,12 @@ class TestLogin(unittest.TestCase):
         Login_Social = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, 'password')))
         Login_Social = driver.find_element_by_name('password').send_keys('Bass2000v_8f_8trestat')
         Login_Social = driver.find_element_by_xpath('//*[@id="passwordNext"]/div/button/div[2]').click()
-        Login_Social = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+        print('Google login OK!')
+        #Переходим в профиль
+        print('Start Arenum quests')
+        Login_Social = WebDriverWait(driver, 100).until(EC.presence_of_element_located(
             (By.CLASS_NAME, 'header-profile')))
+        Login_Social = driver.find_element_by_class_name('header-profile').click()
         Go_To_Quest = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
         Go_To_Quest = driver.find_element_by_xpath(
@@ -126,13 +133,14 @@ class TestLogin(unittest.TestCase):
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
             Go_To_Quest = driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
+        #Переходим во вкладку задания
         Go_To_Quest = driver.find_element_by_xpath(
             '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
         Go_To_Quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
 
         self.assertTrue(Go_To_Quest, "Test Failed")
-        print('Google login end')
+        print('Google Arenum Quest OK!')
         print('Google test OK!')
     def tearDown(self):
         self.driver.close()

@@ -1,11 +1,14 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-import unittest
 import random
+import unittest
+import pytest
+
+
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class TestLogin(unittest.TestCase):
@@ -79,7 +82,7 @@ class TestLogin(unittest.TestCase):
 
         # Выходим из аккаунта после выполнения заданий
         driver.find_element_by_class_name('header-profile').click()
-        WebDriverWait(driver,10).LogOut_Dis = WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 10).LogOut_Dis = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[2]')))
         driver.find_element_by_xpath('//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[2]').click()
@@ -94,7 +97,7 @@ class TestLogin(unittest.TestCase):
         self.assertTrue(log_out, 'Test Failed')
         print('Discord log out ok!')
         print('Discord Test OK!')
-    #@unittest.skip('Google test skipped for FB')
+
     def test_log_in_Google(self):
         print('Google test start')
         print('Google login start')
@@ -102,9 +105,9 @@ class TestLogin(unittest.TestCase):
         driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
         driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
         #Вход на сайт через Google аккаунт
-        Login_wait = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+        login_wait = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/div[4]/div[2]/div/div[2]/div[2]/button[3]')))
-        driver.execute_script("arguments[0].click();", Login_wait)
+        driver.execute_script("arguments[0].click();", login_wait)
         WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, 'identifier')))
         driver.find_element_by_name('identifier').send_keys('skvorcov_a@arenum.games')
         driver.find_element_by_xpath('//*[@id="identifierNext"]/div/button/div[2]').click()
@@ -114,7 +117,7 @@ class TestLogin(unittest.TestCase):
         print('Google login OK!')
         #Переходим в профиль
         print('Start Arenum quests')
-        WebDriverWait(driver, 100).until(EC.presence_of_element_located(
+        WebDriverWait(driver, 100).until(EC.visibility_of_element_located(
             (By.CLASS_NAME, 'header-profile')))
         driver.find_element_by_class_name('header-profile').click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
@@ -145,7 +148,7 @@ class TestLogin(unittest.TestCase):
         self.assertTrue(go_to_quest, "Test Failed")
         print('Google Arenum Quest OK!')
         print('Google test OK!')
-    #@unittest.skip('Skipped for AppleId')
+
     def test_log_in_Facebook(self):
         print('Facebook test start')
         print('Facebook login start')

@@ -1,7 +1,9 @@
 import random
 import unittest
 import pytest
+import allure
 
+#Todo оптимизация тестов под pytest для корректной и быстрой работы и выгрузку в allure report
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException

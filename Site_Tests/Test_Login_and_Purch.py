@@ -1,9 +1,5 @@
 import random
 import unittest
-import pytest
-import allure
-
-#Todo оптимизация тестов под pytest для корректной и быстрой работы и выгрузку в allure report
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
@@ -16,6 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 class TestLogin(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
+
     @unittest.skip('Discord test skipped for Google Test')
     def test_log_in_discord(self):
         #Вход на сайт и логин в дискорд

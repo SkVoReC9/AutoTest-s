@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class Test_Login_Google:
+class TestLoginGoogle:
 
     @pytest.fixture(scope="class", autouse=True)
     def driver(self):

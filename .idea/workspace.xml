@@ -4,9 +4,7 @@
     <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Facebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Facebook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Google.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Login_and_Purch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Unittest_project/Test_Login_and_Purch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1kFp3MVTwIKdez6KneAG2HqbBZc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

@@ -11,6 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 @allure.epic("Тестирование с помощью Google")
 @allure.feature('Вход и выполнение задания')
 @pytest.fixture(scope="module", autouse=True)
+@pytest.mark.skip('lol')
 def driver():
     with allure.step('Инициализация драйвера'):
         driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
@@ -21,6 +22,7 @@ def driver():
 @allure.epic("Тестирование с помощью Google")
 @allure.feature('Вход и выполнение задания')
 @allure.story('Заходим в Google аккаунт')
+@pytest.mark.skip('lol')
 def test_google_login(driver):
     with allure.step('Нажимаем на войти'):
         driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
@@ -46,6 +48,7 @@ def test_google_login(driver):
 @allure.epic("Тестирование с помощью Google")
 @allure.feature('Вход и выполнение задания')
 @allure.story('Выполняем задания')
+@pytest.mark.skip('lol')
 def test_quest_google(driver):
     with allure.step('Переходим в профиль'):
         WebDriverWait(driver, 100).until(EC.visibility_of_element_located(

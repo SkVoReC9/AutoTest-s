@@ -13,11 +13,9 @@ class TestLoginGoogle:
 
     @pytest.fixture(scope="class", autouse=True)
     def driver(self):
-        print('Initialize driver')
         driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
         driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
         yield driver
-        print('Close driver')
         driver.quit()
 
     @pytest.fixture(scope='function')
@@ -50,8 +48,7 @@ class TestLoginGoogle:
         except TimeoutException:
             assert False
 
-    @allure.feature('Google')
-    @allure.story('Заходим в Google аккаунт')
+    @allure.story('Выполняем задания')
     def test_quest_google(self, driver, test_google):
         with allure.step('Переходим в профиль'):
             WebDriverWait(driver, 100).until(EC.visibility_of_element_located(
@@ -83,3 +80,4 @@ class TestLoginGoogle:
             go_to_quest = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
                 (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
         assert True
+

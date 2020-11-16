@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class TestLogin(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path='/chromedriver.exe')
 
     @unittest.skip('Discord test skipped for Google Test')
     def test_log_in_discord(self):

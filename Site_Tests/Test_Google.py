@@ -10,9 +10,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 @allure.epic("Тестирование с помощью Google")
 @allure.feature('Вход и выполнение задания')
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="module", autouse=True)
 def driver():
-    driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
+    with allure.step('Инициализация драйвера'):
+        driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
     driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
     yield driver
     driver.quit()

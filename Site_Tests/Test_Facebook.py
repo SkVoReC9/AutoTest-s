@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 @allure.epic("Тестирование с помощью Facebook")
 @allure.feature('Вход и выполнение задания')
+@pytest.mark.skip('Not ready for test')
 @pytest.fixture(scope="session", autouse=True)
 def driver():
     driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site_Tests/Test_Facebook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Login_Social.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Login_Social.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Login_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
       <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Admin_Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Test_Login_Google">
+  <component name="RunManager" selected="Python.Test_Google">
     <configuration name="AI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_Login_Google" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Google" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,7 +108,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests\Test_Login_Google.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests\Test_Google.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,7 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Test_Login_Google" />
+        <item itemvalue="Python.Test_Google" />
         <item itemvalue="Python.AI" />
         <item itemvalue="Python.Test_Login_and_Purch" />
         <item itemvalue="Python.Auto_Login" />
@@ -353,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605516872421</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Refactoring">
+      <created>1605525219066</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1605525219066</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,13 +408,14 @@
     <MESSAGE value="New Py file with PyTest" />
     <MESSAGE value="Added PyTest test's and Allure reports" />
     <MESSAGE value="Optimize Allure feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimize Allure feature" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605516858419">
+    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605525214072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605516858419" />
+    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605525214072" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1605366674569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -426,10 +436,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605339775040" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605516880421">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605525222206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605516880421" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605525222206" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605307957905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

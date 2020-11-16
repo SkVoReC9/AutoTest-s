@@ -8,7 +8,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-
+@allure.epic("Тестирование с помощью Google")
+@allure.feature('Вход и выполнение задания')
 @pytest.fixture(scope="session", autouse=True)
 def driver():
     driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
@@ -16,7 +17,8 @@ def driver():
     yield driver
     driver.quit()
 
-
+@allure.epic("Тестирование с помощью Google")
+@allure.feature('Вход и выполнение задания')
 @allure.story('Заходим в Google аккаунт')
 def test_google_login(driver):
     with allure.step('Нажимаем на войти'):
@@ -40,7 +42,8 @@ def test_google_login(driver):
     except TimeoutException:
         assert False
 
-
+@allure.epic("Тестирование с помощью Google")
+@allure.feature('Вход и выполнение задания')
 @allure.story('Выполняем задания')
 def test_quest_google(driver):
     with allure.step('Переходим в профиль'):

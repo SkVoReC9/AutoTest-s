@@ -18,6 +18,7 @@ def pytest_generate_tests(metafunc):
 
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход и выполнение задания')
+@pytest.mark.skip('lol')
 class TestDiscord:
 
     @pytest.fixture(scope="function", autouse=True)

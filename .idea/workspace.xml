@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -400,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605550039838</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added new params">
+      <created>1605609493207</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1605609493207</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -452,10 +458,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added new params" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605550036704">
+    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605609490027">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605550036704" />
+    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605609490027" />
     <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1605607167589">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -492,10 +498,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605339775040" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605550041945">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605609496225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605550041945" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605609496225" />
     <state x="803" y="305" key="refactoring.ChangeSignatureDialog" timestamp="1605594754469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

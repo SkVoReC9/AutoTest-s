@@ -24,7 +24,7 @@ class TestGoogle:
     def driver(self, url):
         with allure.step('Инициализация драйвера'):
             driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
-            driver.implicitly_wait(10)  # seconds
+            driver.implicitly_wait(10)
         driver.get(url)
         yield driver
         driver.close()
@@ -41,10 +41,10 @@ class TestGoogle:
                 (By.XPATH, '//*[@id="__layout"]/div/div[4]/div[2]/div/div[2]/div[2]/button[3]')))
             driver.execute_script("arguments[0].click();", login_wait)
         with allure.step('Вводим данные и заходим'):
-            WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, 'identifier')))
+            WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.NAME, 'identifier')))
             driver.find_element_by_name('identifier').send_keys('skvorcov_a@arenum.games')
             driver.find_element_by_xpath('//*[@id="identifierNext"]/div/button/div[2]').click()
-            WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, 'password')))
+            WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.NAME, 'password')))
             driver.find_element_by_name('password').send_keys('Bass2000v_8f_8trestat')
             driver.find_element_by_xpath('//*[@id="passwordNext"]/div/button/div[2]').click()
         try:
@@ -62,7 +62,7 @@ class TestGoogle:
             WebDriverWait(driver, 100).until(EC.visibility_of_element_located(
                 (By.CLASS_NAME, 'header-profile')))
             driver.find_element_by_class_name('header-profile').click()
-            WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+            WebDriverWait(driver, 5).until(EC.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()

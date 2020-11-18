@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 def pytest_generate_tests(metafunc):
     if 'url' in metafunc.fixturenames:
         metafunc.parametrize(
-            'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            'url', list(['https://web.arenum.games/ru/','https://battlearena:tobattle!@web-stable.arenum.games/ru/',
                          'https://battlearena:tobattle!@web-stable.arenum.gg/ru/']), scope='class')
 
 
@@ -29,6 +29,7 @@ class TestDiscord:
 
     @allure.epic("Тестирование с помощью Discord")
     @allure.feature('Вход и выполнение задания')
+    @allure.story('Заходим в Discord аккаунт')
     def test_discord_login(self, driver):
         with allure.step('Открываем сайт  и нажимаем войти'):
             driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
@@ -52,3 +53,38 @@ class TestDiscord:
             assert True
         except TimeoutException:
             assert False
+
+    @allure.epic("Тестирование с помощью Discord")
+    @allure.feature('Вход и выполнение задания')
+    @allure.story('Выполняем задания')
+    def test_quest_discord(self, driver):
+        with allure.step('Переходим в профиль'):
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+                (By.CLASS_NAME, 'header-profile')))
+            driver.find_element_by_class_name('header-profile').click()
+            WebDriverWait(driver, 5).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
+            driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()
+        try:
+            WebDriverWait(driver, 4).until(ec.presence_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
+            driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
+        except TimeoutException:
+            driver.find_element_by_class_name('header-profile').click()
+            WebDriverWait(driver, 4).until(ec.presence_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
+            driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()
+            WebDriverWait(driver, 10).until(ec.presence_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
+            driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
+        with allure.step('Переходим во вкладку задания'):
+            # Переходим во вкладку задания
+            driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
+        go_to_quest = WebDriverWait(driver, 10).until(ec.presence_of_element_located(
+            (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
+        assert True

@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 def pytest_generate_tests(metafunc):
     if 'url' in metafunc.fixturenames:
         metafunc.parametrize(
-            'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            'url', list(['https://web.arenum.games/ru/','https://battlearena:tobattle!@web-stable.arenum.games/ru/',
                          'https://battlearena:tobattle!@web-stable.arenum.gg/ru/']), scope='class')
 
 

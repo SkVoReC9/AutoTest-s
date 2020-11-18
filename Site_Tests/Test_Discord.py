@@ -4,7 +4,6 @@ import allure
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -18,22 +17,20 @@ def pytest_generate_tests(metafunc):
 
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход и выполнение задания')
-@pytest.mark.skip('lol')
 class TestDiscord:
-
-    @pytest.fixture(scope="function", autouse=True)
-    def driver(self):
+    @pytest.fixture(scope="class", autouse=True)
+    def driver(self, url):
         with allure.step('Инициализация драйвера'):
             driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
-            driver.implicitly_wait(10)  # seconds
+            driver.implicitly_wait(10)
+        driver.get(url)
         yield driver
-        driver.quit()
+        driver.close()
 
     @allure.epic("Тестирование с помощью Discord")
     @allure.feature('Вход и выполнение задания')
-    def test_discord_login(self, driver, url):
-        with allure.step('Открываем сайт {0} и нажимаем войти'.format(url)):
-            driver.get(url)
+    def test_discord_login(self, driver):
+        with allure.step('Открываем сайт  и нажимаем войти'):
             driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
         with allure.step('Выбираем Discord'):
             login_wait = WebDriverWait(driver, 10).until(ec.presence_of_element_located(

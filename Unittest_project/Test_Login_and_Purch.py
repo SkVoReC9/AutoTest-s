@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class TestLogin(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path='/chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
 
     @unittest.skip('Discord test skipped for Google Test')
     def test_log_in_discord(self):
@@ -19,7 +19,7 @@ class TestLogin(unittest.TestCase):
         print('Start Discord Test')
         print('Discord login start')
         driver = self.driver
-        driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
+        driver.get('web.arenum.games/ru/')
         login = driver.find_element_by_xpath('//button[contains(text(),Войти)]')
         login.click()
         login_wait = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
@@ -101,7 +101,7 @@ class TestLogin(unittest.TestCase):
         print('Google test start')
         print('Google login start')
         driver = self.driver
-        driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
+        driver.get('web.arenum.games/ru/')
         driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
         #Вход на сайт через Google аккаунт
         login_wait = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
@@ -152,7 +152,7 @@ class TestLogin(unittest.TestCase):
         print('Facebook test start')
         print('Facebook login start')
         driver = self.driver
-        driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
+        driver.get('web.arenum.games/ru/')
         driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
         # Вход на сайт через Google аккаунт
         Login_wait = WebDriverWait(driver, 10).until(EC.presence_of_element_located(

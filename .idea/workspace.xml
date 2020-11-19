@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Picturies/Arenum_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Picturies/Arenum_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Picturies/Arenum_3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Google.py" afterDir="false" />
@@ -18,11 +21,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>allure</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,8 +49,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Unittest_project" />
+      <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты" />
+      <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests\Picturies" />
       <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests" />
+      <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Unittest_project" />
       <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Admin_Tests" />
     </key>
   </component>
@@ -90,7 +90,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -415,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605690263978</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added new params">
+      <created>1605716972938</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1605716972938</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -467,50 +474,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added new params" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605690253304">
+    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605716962445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605690253304" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1605715051485">
+    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605716962445" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1605799719001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605715051485" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1605715051485">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605799719001" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1605799719001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605715051485" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1605715051484">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605799719001" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1605799719001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605715051484" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1605715051485">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605799719001" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1605799719001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605715051485" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1605607167589">
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605799719001" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1605790839720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605607167589" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1605607167589">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605790839720" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1605790839719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605607167589" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1605607167589">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605790839719" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1605790839719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605607167589" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1605607167589">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605790839719" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1605790839719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605607167589" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605790839719" />
     <state x="636" y="96" key="SettingsEditor" timestamp="1605339775040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605339775040" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605690903863">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605716977593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605690903863" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605716977593" />
+    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1605788307883">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605788307883" />
     <state x="803" y="305" key="refactoring.ChangeSignatureDialog" timestamp="1605594754469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

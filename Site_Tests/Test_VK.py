@@ -87,7 +87,7 @@ class TestVk:
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем аватарку')
-    def test_avatar_discord(self, driver):
+    def test_avatar_vk(self, driver):
         with allure.step('Переходим во вкладку редактирования'):
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[2]').click()
@@ -109,7 +109,7 @@ class TestVk:
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем никнейм')
-    def test_nickname_discord(self, driver):
+    def test_nickname_vk(self, driver):
         with allure.step('Переходим во вкладку редактирования'):
             WebDriverWait(driver, 5).until(ec.presence_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[2]')

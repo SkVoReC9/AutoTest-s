@@ -20,7 +20,6 @@ def pytest_generate_tests(metafunc):
 
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
-@pytest.mark.skip('l')
 class TestDiscord:
     @pytest.fixture(scope="class", autouse=True)
     def driver(self, url):

@@ -20,7 +20,6 @@ def pytest_generate_tests(metafunc):
 
 @allure.epic("Тестирование с помощью Google")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
-@pytest.mark.skip('l')
 class TestGoogle:
     @pytest.yield_fixture(scope="class", autouse=True)
     def driver(self, url):

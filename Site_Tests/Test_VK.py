@@ -30,7 +30,7 @@ class TestVk:
         yield driver
         driver.close()
 
-    @allure.epic("Тестирование с помощью Вконтакте")
+    @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Заходим в аккаунт Вконтакте')
     def test_vk_login(self, driver):

@@ -20,6 +20,7 @@ def pytest_generate_tests(metafunc):
 
 @allure.epic("Тестирование с помощью Google")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
+@pytest.mark.skip('l')
 class TestGoogle:
     @pytest.yield_fixture(scope="class", autouse=True)
     def driver(self, url):
@@ -77,7 +78,7 @@ class TestGoogle:
             # Переходим во вкладку задания
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
-        go_to_quest = WebDriverWait(driver, 10).until(ec.presence_of_element_located(
+        WebDriverWait(driver, 10).until(ec.presence_of_element_located(
             (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
         assert True
 

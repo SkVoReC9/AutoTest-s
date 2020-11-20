@@ -18,10 +18,9 @@ def pytest_generate_tests(metafunc):
                          'https://battlearena:tobattle!@web-stable.arenum.gg/ru/']), scope='class')
 
 
-@allure.epic("Тестирование с помощью Discord")
+@allure.epic("Тестирование с помощью VK")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
-@pytest.mark.skip('l')
-class TestDiscord:
+class TestVk:
     @pytest.fixture(scope="class", autouse=True)
     def driver(self, url):
         with allure.step('Инициализация драйвера'):
@@ -31,26 +30,21 @@ class TestDiscord:
         yield driver
         driver.close()
 
-    @allure.epic("Тестирование с помощью Discord")
+    @allure.epic("Тестирование с помощью Вконтакте")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
-    @allure.story('Заходим в Discord аккаунт')
-    def test_discord_login(self, driver):
+    @allure.story('Заходим в аккаунт Вконтакте')
+    def test_vk_login(self, driver):
         with allure.step('Открываем сайт  и нажимаем войти'):
             driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
-        with allure.step('Выбираем Discord'):
+        with allure.step('Выбираем Вконтакте'):
             login_wait = WebDriverWait(driver, 10).until(ec.presence_of_element_located(
-                    (By.XPATH, '//*[@id="__layout"]/div/div[4]/div[2]/div/div[2]/div[2]/button[2]')))
+                (By.XPATH, '//*[@id="__layout"]/div/div[4]/div[2]/div/div[2]/div[2]/button[1]')))
             driver.execute_script("arguments[0].click();", login_wait)
         with allure.step('Вводим данные и заходим'):
             WebDriverWait(driver, 10).until(ec.element_to_be_clickable((By.NAME, 'email')))
-            driver.find_element_by_name('email').send_keys('p_a.a.skvortsov@mpt.ru')
-            driver.find_element_by_name('password').send_keys('Bass2000v_8')
-            driver.find_element_by_xpath(
-                '//*[@id="app-mount"]/div[2]/div/div[2]/div/div/form/div/div/div[1]/div[3]/button[2]').click()
-        with allure.step('Нажимаем авторизовать после входа в аккаунт'):
-            WebDriverWait(driver, 10).until(ec.element_to_be_clickable(
-                (By.XPATH, '//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div[2]/button[2]')))
-            driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div[2]/button[2]').click()
+            driver.find_element_by_name('email').send_keys('a.zubkov@mytc.io')
+            driver.find_element_by_name('pass').send_keys('arenummolodec')
+            driver.find_element_by_id('install_allow').click()
         try:
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
@@ -58,10 +52,10 @@ class TestDiscord:
         except TimeoutException:
             assert False
 
-    @allure.epic("Тестирование с помощью Discord")
+    @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Выполняем задания')
-    def test_quest_discord(self, driver):
+    def test_quest_vk(self, driver):
         with allure.step('Переходим в профиль'):
             WebDriverWait(driver, 100).until(ec.presence_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
@@ -82,9 +76,15 @@ class TestDiscord:
                 '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
         WebDriverWait(driver, 10).until(ec.presence_of_element_located(
             (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
-        assert True
+        with allure.step('Проверяем что доступны задания ВК'):
+            count_quest = driver.find_element_by_class_name('profile-rewards-list')
+            count = count_quest.find_elements_by_class_name('profile-rewards-item')
+            if count.__len__() > 12:
+                assert True
+            else:
+                assert False
 
-    @allure.epic("Тестирование с помощью Discord")
+    @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем аватарку')
     def test_avatar_discord(self, driver):
@@ -106,7 +106,7 @@ class TestDiscord:
             (By.CLASS_NAME, 'header-profile')))
         assert True
 
-    @allure.epic("Тестирование с помощью Discord")
+    @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем никнейм')
     def test_nickname_discord(self, driver):
@@ -130,7 +130,7 @@ class TestDiscord:
         action.move_by_offset(907, 457).click().perform()
         time.sleep(1)
         driver.find_element_by_class_name('input--big').clear()
-        driver.find_element_by_class_name('input--big').send_keys('Discord_'+str(random.randint(1, 50)))
+        driver.find_element_by_class_name('input--big').send_keys('VKontakte_'+str(random.randint(1, 50)))
         with allure.step('Сохраняем и возвращаемся в профиль'):
             driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[1]/div[1]/div/div[2]').click()
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(

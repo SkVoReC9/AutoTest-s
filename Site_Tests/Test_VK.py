@@ -57,16 +57,18 @@ class TestVk:
     @allure.story('Выполняем задания')
     def test_quest_vk(self, driver):
         with allure.step('Переходим в профиль'):
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/main/div/div[1]')
+            ))
             WebDriverWait(driver, 100).until(ec.presence_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
-            time.sleep(6)
-            WebDriverWait(driver, 5).until(ec.visibility_of_element_located(
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()
-            WebDriverWait(driver, 4).until(ec.presence_of_element_located(
+            WebDriverWait(driver, 100).until(ec.presence_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
@@ -74,7 +76,7 @@ class TestVk:
             # Переходим во вкладку задания
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
-        WebDriverWait(driver, 10).until(ec.presence_of_element_located(
+        WebDriverWait(driver, 1000).until(ec.presence_of_element_located(
             (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
         with allure.step('Проверяем что доступны задания ВК'):
             count_quest = driver.find_element_by_class_name('profile-rewards-list')
@@ -135,7 +137,7 @@ class TestVk:
             driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[1]/div[1]/div/div[2]').click()
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/main/div[2]/div/a[2]')))
-        time.sleep(1)
+        time.sleep(2)
         driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[2]/div/a[2]').click()
         WebDriverWait(driver, 100).until(ec.presence_of_element_located(
             (By.CLASS_NAME, 'header-profile')

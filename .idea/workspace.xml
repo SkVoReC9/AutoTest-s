@@ -454,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605888923112</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added parallel tests">
+      <created>1605949484765</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1605949484765</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -506,29 +513,30 @@
     <MESSAGE value="Refactor project. Added new test's" />
     <MESSAGE value="Refactor for too fast time" />
     <MESSAGE value="Added VK test's. Delete big and slowly code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added VK test's. Delete big and slowly code" />
+    <MESSAGE value="Added parallel tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added parallel tests" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605888919021">
+    <state x="587" y="90" key="CommitChangelistDialog2" timestamp="1605949481190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605888919021" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1605885986405">
+    <state x="587" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605949481190" />
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1605960862641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605885986405" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1605885986405">
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605960862641" />
+    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1605960862641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605885986405" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1605885986405">
+    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605960862641" />
+    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1605960862641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605885986405" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1605885986405">
+    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605960862641" />
+    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1605960862641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605885986405" />
+    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605960862641" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1605881272024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -549,10 +557,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605339775040" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605888934563">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605949580127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605888934563" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605949580127" />
     <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1605788307883">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

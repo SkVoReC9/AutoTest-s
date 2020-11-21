@@ -61,8 +61,8 @@ class TestVk:
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
-            time.sleep(2.5)
-            WebDriverWait(driver, 5).until(ec.presence_of_element_located(
+            time.sleep(6)
+            WebDriverWait(driver, 5).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()

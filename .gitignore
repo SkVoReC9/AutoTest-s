@@ -8,6 +8,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+./.idea
 .Python
 build/
 develop-eggs/
@@ -138,3 +139,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+Site_Tests/reports/
+Test.py

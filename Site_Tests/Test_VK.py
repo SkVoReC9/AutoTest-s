@@ -91,7 +91,8 @@ class TestVk:
         with allure.step('Переходим во вкладку редактирования'):
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
-            driver.find_element_by_xpath('//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
+            driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]')
             ))
@@ -111,7 +112,7 @@ class TestVk:
         action.move_by_offset(907, 457).click().perform()
         time.sleep(1)
         driver.find_element_by_class_name('input--big').clear()
-        driver.find_element_by_class_name('input--big').send_keys('Vkontakte_'+str(random.randint(1, 50)))
+        driver.find_element_by_class_name('input--big').send_keys('Vkontakte_' + str(random.randint(1, 50)))
         with allure.step('Сохраняем и возвращаемся в профиль'):
             driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[1]/div[1]/div/div[2]').click()
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
@@ -136,4 +137,9 @@ class TestVk:
         with allure.step('Проверяем наличие заданий'):
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div/div/div[3]')))
-        assert True
+        count = driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div/div/div/div[3]/div[2]/ul')
+        count_quest = count.find_elements_by_class_name('rewards-group__reward')
+        if count_quest.__len__() > 8:
+            assert True
+        else:
+            assert False

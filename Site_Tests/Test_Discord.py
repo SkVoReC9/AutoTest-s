@@ -96,7 +96,8 @@ class TestDiscord:
         with allure.step('Переходим во вкладку редактирования'):
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
-            driver.find_element_by_xpath('//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
+            driver.find_element_by_xpath(
+                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]')
             ))
@@ -128,7 +129,6 @@ class TestDiscord:
         ))
         assert True
 
-
     @allure.epic("Тестирование с помощью Discord")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Выполняем задания')
@@ -143,4 +143,3 @@ class TestDiscord:
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div/div/div[3]')))
         assert True
-

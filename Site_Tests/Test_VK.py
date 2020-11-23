@@ -54,47 +54,23 @@ class TestVk:
 
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
-    @allure.story('Выполняем задания')
-    def test_quest_vk(self, driver):
-        with allure.step('Переходим в профиль'):
+    @allure.story('Меняем аватарку')
+    def test_avatar_discord(self, driver):
+        with allure.step('Переходим во вкладку редактирования'):
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div[1]')
             ))
             WebDriverWait(driver, 100).until(ec.presence_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
-            driver.find_element_by_xpath(
-                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
-            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]')))
-            driver.find_element_by_xpath(
-                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[1]').click()
-            WebDriverWait(driver, 100).until(ec.presence_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]')))
-            driver.find_element_by_xpath(
-                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]').click()
-        with allure.step('Переходим во вкладку задания'):
-            # Переходим во вкладку задания
-            driver.find_element_by_xpath(
-                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/div').click()
-        WebDriverWait(driver, 1000).until(ec.presence_of_element_located(
-            (By.XPATH, '//*[@id="profile-rewards"]/div[1]/a[2]')))
-        with allure.step('Проверяем что доступны задания ВК'):
-            count_quest = driver.find_element_by_class_name('profile-rewards-list')
-            count = count_quest.find_elements_by_class_name('profile-rewards-item')
-            if count.__len__() > 12:
-                assert True
-            else:
-                assert False
-
-    @allure.epic("Тестирование с помощью VK")
-    @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
-    @allure.story('Меняем аватарку')
-    def test_avatar_vk(self, driver):
-        with allure.step('Переходим во вкладку редактирования'):
-            driver.find_element_by_xpath(
-                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[2]').click()
-            WebDriverWait(driver, 5).until(ec.presence_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/main/div[1]/div[2]/div[2]/div[2]/div[2]')))
+        driver.find_element_by_xpath(
+            '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
+        WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+            (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]')
+        ))
+        driver.find_element_by_xpath(
+            '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]').click()
+        WebDriverWait(driver, 5).until(ec.presence_of_element_located(
+            (By.XPATH, '//*[@id="__layout"]/div/main/div[1]/div[2]/div[2]/div[2]/div[2]')))
         WebDriverWait(driver, 5).until(ec.presence_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/main/div[1]/div[2]/div[1]/div[1]/input')
         ))
@@ -111,13 +87,16 @@ class TestVk:
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем никнейм')
-    def test_nickname_vk(self, driver):
+    def test_nickname_discord(self, driver):
         with allure.step('Переходим во вкладку редактирования'):
-            WebDriverWait(driver, 5).until(ec.presence_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[2]')
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
+            driver.find_element_by_xpath('//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]')
             ))
             driver.find_element_by_xpath(
-                '//*[@id="__layout"]/div/main/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/button[2]').click()
+                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]').click()
         WebDriverWait(driver, 5).until(ec.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/main/div[1]/div[2]/div[2]/div[2]/div[2]')))
         time.sleep(1)
@@ -132,14 +111,29 @@ class TestVk:
         action.move_by_offset(907, 457).click().perform()
         time.sleep(1)
         driver.find_element_by_class_name('input--big').clear()
-        driver.find_element_by_class_name('input--big').send_keys('VKontakte_'+str(random.randint(1, 50)))
+        driver.find_element_by_class_name('input--big').send_keys('Vkontakte_'+str(random.randint(1, 50)))
         with allure.step('Сохраняем и возвращаемся в профиль'):
             driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[1]/div[1]/div/div[2]').click()
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
-            (By.XPATH, '//*[@id="__layout"]/div/main/div[2]/div/a[2]')))
-        time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[2]/div/a[2]').click()
+            (By.XPATH, '//*[@id="__layout"]/div/main/div[2]/div/a[3]')))
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[2]/div/a[3]').click()
         WebDriverWait(driver, 100).until(ec.presence_of_element_located(
             (By.CLASS_NAME, 'header-profile')
         ))
+        assert True
+
+    @allure.epic("Тестирование с помощью VK")
+    @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
+    @allure.story('Выполняем задания')
+    def test_quest_discord(self, driver):
+        with allure.step('Переходим во вкладку задания'):
+            # Переходим во вкладку задания
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[1]/div[3]/a')
+            ))
+            driver.find_element_by_xpath('//*[@id="__layout"]/div/div[1]/div/div/div/div[1]/div[3]/a').click()
+        with allure.step('Проверяем наличие заданий'):
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/main/div/div/div/div[3]')))
         assert True

@@ -13,7 +13,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 @pytest.mark.skip('Not ready for test')
 @pytest.fixture(scope="session", autouse=True)
 def driver():
-    driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
+    driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
     driver.get('https://battlearena:tobattle!@web-stable.arenum.games/ru/')
     yield driver
     driver.quit()

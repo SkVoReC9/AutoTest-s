@@ -24,7 +24,7 @@ class TestVk:
     @pytest.fixture(scope="class", autouse=True)
     def driver(self, url):
         with allure.step('Инициализация драйвера'):
-            driver = webdriver.Chrome(executable_path='C:/Users/SkVoReC/Desktop/Работа/Автотесты/chromedriver.exe')
+            driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
             driver.implicitly_wait(10)
         driver.get(url)
         yield driver
@@ -47,7 +47,7 @@ class TestVk:
             driver.find_element_by_id('install_allow').click()
         try:
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture')))
             assert True
         except TimeoutException:
             assert False
@@ -55,15 +55,15 @@ class TestVk:
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем аватарку')
-    def test_avatar_discord(self, driver):
+    def test_avatar_vk(self, driver):
         with allure.step('Переходим во вкладку редактирования'):
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/main/div/div[1]')
             ))
-            WebDriverWait(driver, 100).until(ec.presence_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
+            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture')))
         driver.find_element_by_xpath(
-            '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
+            '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture').click()
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]')
         ))
@@ -76,7 +76,7 @@ class TestVk:
         ))
         with allure.step('Загружаем одну из 3 картинок'):
             driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[1]/div[2]/div[1]/div[1]/input').send_keys(
-                'C:/Users/SkVoReC/Desktop/Работа/Автотесты/Picturies/Arenum_' + str(random.randint(1, 3)) + '.jpg')
+                'C:/Users/Александр/Desktop/Работа/AutoTest-s/Picturies/Arenum_' + str(random.randint(1, 3)) + '.jpg')
         time.sleep(3)
         with allure.step('Выходим обратно в профиль'):
             driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[1]/div[1]/div/a').click()
@@ -87,22 +87,22 @@ class TestVk:
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем никнейм')
-    def test_nickname_discord(self, driver):
+    def test_nickname_vk(self, driver):
         with allure.step('Переходим во вкладку редактирования'):
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture')))
+                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture')))
             driver.find_element_by_xpath(
-                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/picture').click()
+                '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture').click()
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]')
             ))
             driver.find_element_by_xpath(
                 '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/a[3]').click()
         WebDriverWait(driver, 5).until(ec.visibility_of_element_located(
-            (By.XPATH, '//*[@id="__layout"]/div/main/div[1]/div[2]/div[2]/div[2]/div[2]')))
+            (By.XPATH, '/html/body/div/div/div/main/div[1]/div[2]/div[2]/div[2]/div[2]/span')))
         time.sleep(1)
         with allure.step('Нажимаем на никнейм'):
-            driver.find_element_by_xpath('//*[@id="__layout"]/div/main/div[1]/div[2]/div[2]/div[2]/div[2]').click()
+            driver.find_element_by_xpath('/html/body/div/div/div/main/div[1]/div[2]/div[2]/div[2]/div[2]/span').click()
         WebDriverWait(driver, 5).until(ec.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/main/div[1]/div[2]/div/div/div[2]')
         ))
@@ -127,7 +127,7 @@ class TestVk:
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Выполняем задания')
-    def test_quest_discord(self, driver):
+    def test_quest_vk(self, driver):
         with allure.step('Переходим во вкладку задания'):
             # Переходим во вкладку задания
             WebDriverWait(driver, 100).until(ec.visibility_of_element_located(

@@ -15,7 +15,7 @@ def pytest_generate_tests(metafunc):
     if 'url' in metafunc.fixturenames:
         metafunc.parametrize(
             'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
-                         'https://battlearena:tobattle!@web-stable.arenum.gg/ru/']), scope='class')
+                         ]), scope='class')
 
 
 @allure.epic("Тестирование с помощью Google")
@@ -86,7 +86,7 @@ class TestGoogle:
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
             (By.CLASS_NAME, 'header-profile')))
         assert True
-
+    @pytest.mark.skip("ww")
     @allure.epic("Тестирование с помощью Google")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
     @allure.story('Меняем никнейм')

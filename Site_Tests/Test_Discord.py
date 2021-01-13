@@ -15,9 +15,9 @@ def pytest_generate_tests(metafunc):
     if 'url' in metafunc.fixturenames:
         metafunc.parametrize(
             'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
-                         'https://battlearena:tobattle!@web-stable.arenum.gg/ru/']), scope='class')
+                         ]), scope='class')
 
-
+@pytest.mark.skip("Так надо")
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 class TestDiscord:

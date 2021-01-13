@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="">
+    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Edit for new work station">
+      <change afterPath="$PROJECT_DIR$/Site_Tests/Test_API.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Discord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Facebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Facebook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_Google.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site_Tests/Test_VK.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site_Tests/Test_VK.py" afterDir="false" />
     </list>
@@ -471,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605963429212</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Edit for new work station">
+      <created>1608374256338</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1608374256338</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,6 +531,7 @@
     <MESSAGE value="Refactor for too fast time" />
     <MESSAGE value="Added VK test's. Delete big and slowly code" />
     <MESSAGE value="Added parallel tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added parallel tests" />
+    <MESSAGE value="Edit for new work station" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit for new work station" />
   </component>
 </project>

@@ -31,7 +31,7 @@ class TestDiscord:
             chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
             driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
             driver.set_window_size(100, 950)
-            driver.implicitly_wait(10)
+            driver.implicitly_wait(9)
         driver.get(url)
         yield driver
         driver.close()

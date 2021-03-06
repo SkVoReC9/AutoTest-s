@@ -60,8 +60,8 @@
       <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Admin_Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Test">
-    <configuration name="AI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.RunTest">
+    <configuration name="RunTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -70,10 +70,10 @@
       </envs>
       <option name="SDK_HOME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/untitled/AI.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Site_Tests/RunTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.RunTest" />
+        <item itemvalue="Python.Test_Google" />
         <item itemvalue="Python.Test" />
         <item itemvalue="Python tests.Unittests in Test_Login_and_Purch.py" />
         <item itemvalue="Python.ssss" />
-        <item itemvalue="Python.Test_Google" />
-        <item itemvalue="Python.AI" />
       </list>
     </recent_temporary>
   </component>
@@ -482,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608374256338</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Edit for new work station">
+      <created>1614969777221</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1614969777221</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,5 +544,16 @@
     <MESSAGE value="Added parallel tests" />
     <MESSAGE value="Edit for new work station" />
     <option name="LAST_COMMIT_MESSAGE" value="Edit for new work station" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Site_Tests/RunTest.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

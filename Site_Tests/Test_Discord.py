@@ -14,7 +14,8 @@ from selenium.webdriver.common import action_chains
 def pytest_generate_tests(metafunc):
     if 'url' in metafunc.fixturenames:
         metafunc.parametrize(
-            'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            #'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            'url', list(['https://arenum.games/ru',
                          ]), scope='class')
 
 
@@ -31,7 +32,7 @@ class TestDiscord:
             chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
             driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
             driver.set_window_size(100, 950)
-            driver.implicitly_wait(9)
+            driver.implicitly_wait(10)
         driver.get(url)
         yield driver
         driver.close()
@@ -57,8 +58,11 @@ class TestDiscord:
                 (By.XPATH, '//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div[2]/button[2]')))
             driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div[2]/button[2]').click()
         try:
-            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture')))
+            WebDriverWait(driver, 20).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[contains(text(),"Напомнить позже")]')))
+            driver.find_element_by_xpath('//*[contains(text(),"Напомнить позже")]').click()
+            WebDriverWait(driver, 20).until(ec.visibility_of_element_located(
+                (By.CLASS_NAME, 'tab-bar-profile')))
             assert True
         except TimeoutException:
             assert False

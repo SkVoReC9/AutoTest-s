@@ -14,7 +14,8 @@ from selenium.webdriver.common import action_chains
 def pytest_generate_tests(metafunc):
     if 'url' in metafunc.fixturenames:
         metafunc.parametrize(
-            'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            #'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            'url', list(['https://arenum.games/ru',
                          ]), scope='class')
 
 
@@ -31,7 +32,7 @@ class TestVk:
             chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
             driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
             driver.set_window_size(100, 950)
-            driver.implicitly_wait(9)
+            driver.implicitly_wait(10)
         driver.get(url)
         yield driver
         driver.close()
@@ -41,7 +42,7 @@ class TestVk:
     @allure.story('Заходим в аккаунт Вконтакте')
     def test_vk_login(self, driver):
         with allure.step('Открываем сайт  и нажимаем войти'):
-            driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
+            driver.find_element_by_class_name('header-mobile-avatar').click()
         with allure.step('Выбираем Вконтакте'):
             login_wait = WebDriverWait(driver, 10).until(ec.presence_of_element_located(
                 (By.XPATH, '//*[@id="__layout"]/div/div[4]/div[2]/div/div[2]/div[2]/button[1]')))
@@ -52,8 +53,11 @@ class TestVk:
             driver.find_element_by_name('pass').send_keys('arenummolodec')
             driver.find_element_by_id('install_allow').click()
         try:
-            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture')))
+            WebDriverWait(driver, 20).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[contains(text(),"Напомнить позже")]')))
+            driver.find_element_by_xpath('//*[contains(text(),"Напомнить позже")]').click()
+            WebDriverWait(driver, 20).until(ec.visibility_of_element_located(
+                (By.CLASS_NAME, 'tab-bar-profile')))
             assert True
         except TimeoutException:
             assert False
@@ -89,6 +93,7 @@ class TestVk:
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
             (By.CLASS_NAME, 'header-profile')))
         assert True
+
     @pytest.mark.skip("ww")
     @allure.epic("Тестирование с помощью VK")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')

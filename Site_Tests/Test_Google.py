@@ -14,7 +14,8 @@ from selenium.webdriver.common import action_chains
 def pytest_generate_tests(metafunc):
     if 'url' in metafunc.fixturenames:
         metafunc.parametrize(
-            'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            #'url', list(['https://battlearena:tobattle!@web-stable.arenum.games/ru/',
+            'url', list(['https://arenum.games/ru',
                          ]), scope='class')
 
 
@@ -31,7 +32,7 @@ class TestGoogle:
             chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
             driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
             driver.set_window_size(100, 950)
-            driver.implicitly_wait(9)
+            driver.implicitly_wait(10)
         driver.get(url)
         yield driver
         driver.close()
@@ -41,7 +42,7 @@ class TestGoogle:
     @allure.story('Заходим в Google аккаунт')
     def test_google_login(self, driver):
         with allure.step('Открываем сайт и нажимаем войти'):
-            driver.find_element_by_xpath('//button[contains(text(),Войти)]').click()
+            driver.find_element_by_class_name('header-mobile-avatar').click()
         # Вход на сайт через Google аккаунт
         with allure.step('Выбираем Google'):
             login_wait = WebDriverWait(driver, 10).until(ec.presence_of_element_located(
@@ -52,11 +53,14 @@ class TestGoogle:
             driver.find_element_by_name('identifier').send_keys('skvorcov_a@arenum.games')
             driver.find_element_by_xpath('//*[@id="identifierNext"]/div/button/div[2]').click()
             WebDriverWait(driver, 20).until(ec.element_to_be_clickable((By.NAME, 'password')))
-            driver.find_element_by_name('password').send_keys('Bass2000v_8f_8trestat')
+            driver.find_element_by_name('password').send_keys('Bass300_0v_8f_89_tre_stat')
             driver.find_element_by_xpath('//*[@id="passwordNext"]/div/button/div[2]').click()
         try:
-            WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
-                (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/picture')))
+            WebDriverWait(driver, 20).until(ec.visibility_of_element_located(
+                (By.XPATH, '//*[contains(text(),"Напомнить позже")]')))
+            driver.find_element_by_xpath('//*[contains(text(),"Напомнить позже")]').click()
+            WebDriverWait(driver, 20).until(ec.visibility_of_element_located(
+                (By.CLASS_NAME, 'tab-bar-profile')))
             assert True
         except TimeoutException:
             assert False
@@ -92,6 +96,7 @@ class TestGoogle:
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
             (By.CLASS_NAME, 'header-profile')))
         assert True
+
     @pytest.mark.skip("ww")
     @allure.epic("Тестирование с помощью Google")
     @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')

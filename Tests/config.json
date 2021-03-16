@@ -1,0 +1,20 @@
+{
+  "0": [
+  {
+    "browser": "chrome",
+    "wait_browser": 10,
+    "url": "https://battlearena:tobattle!@web-stable.arenum.games/ru/",
+    "locale": "ru",
+    "deviceName": "iPhone X"
+  }
+],
+  "1": [
+    {
+      "browser": "firefox",
+      "wait_browser": 10,
+      "url": "https://battlearena:tobattle!@web-stable.arenum.games/ru/",
+      "locale": "ru",
+      "deviceName": "iPhone X"
+    }
+  ]
+}

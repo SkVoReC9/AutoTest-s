@@ -20,19 +20,24 @@ def config():
 @pytest.fixture(scope="session")
 def driver(config):
     with allure.step('Инициализация драйвера'):
-        for i in config:
-            if config[i][0]['browser'] == SUPPORTED_BROWSER:
-                driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
-                num_of_conf = i
-            else:
-                continue
-        mobile_emulation = {"deviceName": config[num_of_conf][0]['deviceName']}
-        browser_locale = config[num_of_conf][0]['locale']
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument("--lang={}".format(browser_locale))
-        chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
-        driver.set_window_size(100, 950)
-        driver.implicitly_wait(config[num_of_conf][0]['wait_browser'])
-    driver.get(config[num_of_conf][0]['url'])
+        if config['browser'] == SUPPORTED_BROWSER:
+            driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument("--lang={}".format(config["locale"]))
+            mobile_emulation = {"deviceName": config['deviceName']}
+            chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+            driver.set_window_size(200, 950)
+            driver.implicitly_wait(config["wait_time"])
+        elif config['browser'] == "firefox":
+            mobile_emulation = {"deviceName": config['deviceName']}
+            firefox_options = webdriver.FirefoxOptions()
+            firefox_options.add_argument("--lang={}".format(config["locale"]))
+            firefox_options.set_preference("mobileEmulation", mobile_emulation)
+            driver = webdriver.Firefox(executable_path="C:/Users/Александр/Desktop/Работа/AutoTest-s/geckodriver.exe")
+            driver.set_window_size(500, 950)
+            driver.implicitly_wait(config["wait_time"])
+        else:
+            raise Exception(f'"{config["browser"]}" is not supported')
+    driver.get(config['url'])
     yield driver
     driver.close()

@@ -43,6 +43,10 @@ def test_google_login(driver):
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 @allure.story('Меняем аватарку')
 def test_avatar_google(driver):
+    with allure.step('Переходим в профиль'):
+        WebDriverWait(driver, 10).until(ec.visibility_of_element_located(
+            (By.XPATH, '//*[@id="__layout"]/div/div[3]/div/a[3]/div')))
+    driver.find_element_by_xpath('//*[@id="__layout"]/div/div[3]/div/a[3]/div').click()
     with allure.step('Переходим во вкладку редактирования'):
         WebDriverWait(driver, 100).until(ec.visibility_of_element_located(
             (By.XPATH, '//*[@id="__layout"]/div/main/div/div[1]')))

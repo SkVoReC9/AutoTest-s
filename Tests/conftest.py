@@ -1,13 +1,13 @@
 import pytest
-import allure
 import json
+import allure
 
 from selenium import webdriver
 
 
 CONFIG_PATH = "C:/Users/Александр/Desktop/Работа/AutoTest-s/Tests/config.json"
 DEFAULT_WAIT = 10
-SUPPORTED_BROWSER = 'chrome'
+SUPPORTED_BROWSER = ['chrome', 'firefox']
 
 
 @pytest.fixture(scope="session")
@@ -20,13 +20,13 @@ def config():
 @pytest.fixture(scope="session")
 def driver(config):
     with allure.step('Инициализация драйвера'):
-        if config['browser'] == SUPPORTED_BROWSER:
+        if config['browser'] == "chrome":
             driver = webdriver.Chrome(executable_path='C:/Users/Александр/Desktop/Работа/AutoTest-s/chromedriver.exe')
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument("--lang={}".format(config["locale"]))
             mobile_emulation = {"deviceName": config['deviceName']}
             chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
-            driver.set_window_size(200, 950)
+            driver.set_window_size(700, 950)
             driver.implicitly_wait(config["wait_time"])
         elif config['browser'] == "firefox":
             mobile_emulation = {"deviceName": config['deviceName']}

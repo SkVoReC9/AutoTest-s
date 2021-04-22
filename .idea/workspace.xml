@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="New test arch">
-      <change afterPath="$PROJECT_DIR$/geckodriver.exe" afterDir="false" />
+    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Add Firefox driver, refactor for FF driver">
+      <change afterPath="$PROJECT_DIR$/Delete tournaments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Test_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Test_Discord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Test_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Test_Google.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Test_VK.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Test_VK.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/conftest.py" afterDir="false" />
     </list>
@@ -40,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/Site_Tests/.pytest_cache/.gitignore&#10;C:/Users/SkVoReC/Desktop/Работа/Автотесты/Site_Tests/debug.log" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tests/Test_Discord.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -51,6 +54,9 @@
       </console-settings>
     </option>
   </component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="mySaveCallSignatures" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Александр\Desktop\Работа\AutoTest-s\Tests" />
@@ -60,8 +66,8 @@
       <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tr">
-    <configuration name="RunTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Delete tournaments">
+    <configuration name="DDOS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,7 +79,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Site_Tests/RunTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDOS.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +88,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Delete tournaments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,7 +100,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Delete tournaments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_Discord" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Автотесты" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/Test_Discord.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,7 +142,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests\Test_Google.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/Test_Google.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,6 +172,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Автотесты" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/conftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tr" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,27 +214,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in Test_Login_and_Purch.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="tests" factoryName="py.test">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Unittest_project" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\Александр\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/../Unittest_project/Test_Login_and_Purch.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Tests/Test_Discord.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Test_Discord" />
+      <item itemvalue="Python.conftest" />
+      <item itemvalue="Python.DDOS" />
+      <item itemvalue="Python.tr" />
+      <item itemvalue="Python.Test_Google" />
+      <item itemvalue="Python.Delete tournaments" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tr" />
-        <item itemvalue="Python.RunTest" />
+        <item itemvalue="Python.Delete tournaments" />
+        <item itemvalue="Python.conftest" />
         <item itemvalue="Python.Test_Google" />
-        <item itemvalue="Python.Test" />
-        <item itemvalue="Python tests.Unittests in Test_Login_and_Purch.py" />
+        <item itemvalue="Python.DDOS" />
+        <item itemvalue="Python.tr" />
       </list>
     </recent_temporary>
   </component>
@@ -503,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615896944304</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Add Firefox driver, refactor for FF driver">
+      <created>1616358926994</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1616358926994</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -545,7 +610,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New module" />
     <MESSAGE value="New text code" />
     <MESSAGE value="New code" />
     <MESSAGE value="Final editing" />
@@ -570,7 +634,8 @@
     <MESSAGE value="Added parallel tests" />
     <MESSAGE value="Edit for new work station" />
     <MESSAGE value="New test arch" />
-    <option name="LAST_COMMIT_MESSAGE" value="New test arch" />
+    <MESSAGE value="Add Firefox driver, refactor for FF driver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Firefox driver, refactor for FF driver" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common import action_chains
 
-
+@pytest.mark.skip()
 @allure.epic("Тестирование с помощью VK")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 @allure.story('Заходим в аккаунт Вконтакте')
@@ -36,7 +36,7 @@ def test_vk_login(driver):
     except TimeoutException:
         assert False
 
-
+@pytest.mark.skip()
 @allure.epic("Тестирование с помощью VK")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 @allure.story('Меняем аватарку')
@@ -66,7 +66,7 @@ def test_avatar_vk(driver):
         (By.CLASS_NAME, 'header-profile')))
     assert True
 
-
+@pytest.mark.skip()
 @pytest.mark.skip("ww")
 @allure.epic("Тестирование с помощью VK")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
@@ -105,7 +105,7 @@ def test_nickname_vk(driver):
         (By.CLASS_NAME, 'header-profile')))
     assert True
 
-
+@pytest.mark.skip()
 @allure.epic("Тестирование с помощью VK")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 @allure.story('Выполняем задания')

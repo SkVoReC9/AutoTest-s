@@ -1,7 +1,7 @@
 import pytest
-import allure
 import random
 import time
+import allure
 
 
 from selenium.common.exceptions import TimeoutException
@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common import action_chains
 
-
+@pytest.mark.skip()
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 @allure.story('Заходим в Discord аккаунт')
@@ -41,7 +41,7 @@ def test_discord_login(driver):
     except TimeoutException:
         assert False
 
-
+@pytest.mark.skip()
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 @allure.story('Меняем аватарку')
@@ -72,7 +72,7 @@ def test_avatar_discord(driver):
         (By.CLASS_NAME, 'header-profile')))
     assert True
 
-
+@pytest.mark.skip()
 @pytest.mark.skip("Так надо")
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
@@ -114,7 +114,7 @@ def test_nickname_discord(driver):
     ))
     assert True
 
-
+@pytest.mark.skip()
 @allure.epic("Тестирование с помощью Discord")
 @allure.feature('Вход, выполнение задания, смена аватарки, никнейма')
 @allure.story('Выполняем задания')

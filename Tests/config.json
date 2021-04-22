@@ -1,6 +1,5 @@
-
 {
-  "browser": "firefox",
+  "browser": "chrome",
   "wait_time": 5,
   "url": "https://arenum.games/ru/",
   "locale": "ru",

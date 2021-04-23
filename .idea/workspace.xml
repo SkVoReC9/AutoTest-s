@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Add Firefox driver, refactor for FF driver">
-      <change afterPath="$PROJECT_DIR$/Delete tournaments.py" afterDir="false" />
+    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Added Script for delete Finished Tournaments">
+      <change afterPath="$PROJECT_DIR$/Delete_news.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reg_User_To_Tournament.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Test_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Test_Discord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Test_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Test_Google.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Test_VK.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Test_VK.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delete tournaments.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delete tournaments.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,28 +63,7 @@
       <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Delete tournaments">
-    <configuration name="DDOS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Автотесты" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDOS.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.Reg_User_To_Tournament">
     <configuration name="Delete tournaments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,6 +77,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Delete tournaments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Delete_news" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Автотесты" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Delete_news.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Reg_User_To_Tournament" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Автотесты" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Reg_User_To_Tournament.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,27 +211,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tr" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Автотесты" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\SkVoReC\Desktop\Работа\Автотесты\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/tr.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -233,18 +230,18 @@
     <list>
       <item itemvalue="Python.Test_Discord" />
       <item itemvalue="Python.conftest" />
-      <item itemvalue="Python.DDOS" />
-      <item itemvalue="Python.tr" />
       <item itemvalue="Python.Test_Google" />
       <item itemvalue="Python.Delete tournaments" />
+      <item itemvalue="Python.Delete_news" />
+      <item itemvalue="Python.Reg_User_To_Tournament" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Reg_User_To_Tournament" />
         <item itemvalue="Python.Delete tournaments" />
+        <item itemvalue="Python.Delete_news" />
         <item itemvalue="Python.conftest" />
         <item itemvalue="Python.Test_Google" />
-        <item itemvalue="Python.DDOS" />
-        <item itemvalue="Python.tr" />
       </list>
     </recent_temporary>
   </component>
@@ -568,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616358926994</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Added Script for delete Finished Tournaments">
+      <created>1619105918580</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1619105918580</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -610,7 +614,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New text code" />
     <MESSAGE value="New code" />
     <MESSAGE value="Final editing" />
     <MESSAGE value="Added more code for create tournament" />
@@ -635,7 +638,8 @@
     <MESSAGE value="Edit for new work station" />
     <MESSAGE value="New test arch" />
     <MESSAGE value="Add Firefox driver, refactor for FF driver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Firefox driver, refactor for FF driver" />
+    <MESSAGE value="Added Script for delete Finished Tournaments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Script for delete Finished Tournaments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

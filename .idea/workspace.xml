@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Added Script for reg into Tournament">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delete tournaments.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delete tournaments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reg_User_To_Tournament.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reg_User_To_Tournament.py" afterDir="false" />
-    </list>
+    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Added SignIn method" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,12 +223,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Test_Discord" />
-      <item itemvalue="Python.conftest" />
-      <item itemvalue="Python.Test_Google" />
       <item itemvalue="Python.Delete tournaments" />
       <item itemvalue="Python.Delete_news" />
       <item itemvalue="Python.Reg_User_To_Tournament" />
+      <item itemvalue="Python.Test_Discord" />
+      <item itemvalue="Python.Test_Google" />
+      <item itemvalue="Python.conftest" />
     </list>
     <recent_temporary>
       <list>
@@ -578,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619203238738</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added SignIn method">
+      <created>1619619510237</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1619619510237</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +623,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Final editing" />
     <MESSAGE value="Added more code for create tournament" />
     <MESSAGE value="New Directory for new Autotests" />
     <MESSAGE value="Unittests for Web Clien" />
@@ -645,7 +647,8 @@
     <MESSAGE value="Add Firefox driver, refactor for FF driver" />
     <MESSAGE value="Added Script for delete Finished Tournaments" />
     <MESSAGE value="Added Script for reg into Tournament" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Script for reg into Tournament" />
+    <MESSAGE value="Added SignIn method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added SignIn method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -654,6 +657,16 @@
           <url>file://$PROJECT_DIR$/Site_Tests/RunTest.py</url>
           <line>34</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Delete tournaments.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Reg_User_To_Tournament.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

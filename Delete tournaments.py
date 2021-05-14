@@ -8,13 +8,13 @@ URL_DELETE_TOURNAMENT = "https://app.msrvbattle.ru/tournaments/admin/"
 
 
 def can_and_del():
-    log_and_pass = {"login":"Boomer_23", "password":"rein2612"}
-    Get_Token = requests.post("https://app.msrvbattle.ru/auth/signinForm", headers=
+    log_and_pass = {"login": "Boomer_23", "password": "rein2612"}
+    get_token = requests.post("https://app.msrvbattle.ru/auth/signinForm", headers=
     {"application": "*/*", "Content-Type": "application/json"}, data=json.dumps(log_and_pass))
-    Token = Get_Token.headers['authorization']
-    Tournaments = requests.get(URL_GET_TOURNAMENT, headers=
-    {"accept": "*/*", "Authorization": str(Token)})
-    json_Tournament = Tournaments.json()
+    token = get_token.headers['authorization']
+    tournaments = requests.get(URL_GET_TOURNAMENT, headers=
+    {"accept": "*/*", "Authorization": str(token)})
+    json_Tournament = tournaments.json()
     print(json_Tournament)
     for j in json_Tournament["items"]:
         g = j["code"]

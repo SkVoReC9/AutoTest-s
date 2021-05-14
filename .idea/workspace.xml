@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Added SignIn method" />
+    <list default="true" id="29ba09b2-d5c5-46a9-825d-ab49d3fac01f" name="Default Changelist" comment="Added SignIn method">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delete tournaments.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delete tournaments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delete_news.py" beforeDir="false" afterPath="$PROJECT_DIR$/Delete_news.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +63,7 @@
       <recent name="C:\Users\SkVoReC\Desktop\Работа\Автотесты\Site_Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Reg_User_To_Tournament">
+  <component name="RunManager" selected="Python.Delete_news">
     <configuration name="Delete tournaments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Автотесты" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -223,18 +228,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.Test_Discord" />
+      <item itemvalue="Python.conftest" />
+      <item itemvalue="Python.Test_Google" />
       <item itemvalue="Python.Delete tournaments" />
       <item itemvalue="Python.Delete_news" />
       <item itemvalue="Python.Reg_User_To_Tournament" />
-      <item itemvalue="Python.Test_Discord" />
-      <item itemvalue="Python.Test_Google" />
-      <item itemvalue="Python.conftest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Reg_User_To_Tournament" />
-        <item itemvalue="Python.Delete tournaments" />
         <item itemvalue="Python.Delete_news" />
+        <item itemvalue="Python.Delete tournaments" />
+        <item itemvalue="Python.Reg_User_To_Tournament" />
         <item itemvalue="Python.conftest" />
         <item itemvalue="Python.Test_Google" />
       </list>
@@ -581,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619619510237</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added SignIn method">
+      <created>1619635758369</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1619635758369</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -659,16 +671,16 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Delete tournaments.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Reg_User_To_Tournament.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/Delete_news.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="get_token.text" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

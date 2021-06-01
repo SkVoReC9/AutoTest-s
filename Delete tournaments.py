@@ -15,6 +15,7 @@ def can_and_del():
     tournaments = requests.get(URL_GET_TOURNAMENT, headers=
     {"accept": "*/*", "Authorization": str(token)})
     json_Tournament = tournaments.json()
+    print(json_Tournament)
     for j in json_Tournament["items"]:
         g = j["code"]
         print(g)
